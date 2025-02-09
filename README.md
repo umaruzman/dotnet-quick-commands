@@ -1,71 +1,66 @@
-# dotnet-quick-commands-by-uzman README
+# Dotnet Model Generator (VS Code Extension)
 
-This is the README for your extension "dotnet-quick-commands-by-uzman". After writing up a brief description, we recommend including the following sections.
+## Overview
+
+Dotnet Model Generator is a VS Code extension that allows developers to quickly generate **Models**, **Controllers**, and **Interfaces** in their .NET projects. It automatically detects the correct namespace and folder structure, ensuring efficient and standardized code creation.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Create Models** in `Model` or `Models` folders.
+- **Create Controllers** in `Controller` or `Controllers` folders.
+- **Create Interfaces** in `Interface` or `Interfaces` folders.
+- **Namespace Auto-Detection**: Finds the nearest `.csproj` file to determine the correct namespace.
+- **Folder Selection**: If multiple target folders exist, the user can select where to create the file.
+- **Controller Type Selection**: Choose between a **Basic Controller** and an **API Controller**.
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Clone this repository or download the source code.
+2. Open the project in **VS Code**.
+3. Run `npm install` to install dependencies.
+4. Press `F5` to launch the extension in a new VS Code window.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Usage
 
-## Requirements
+1. Open a .NET project in VS Code.
+2. Open the **Command Palette** (`Ctrl + Shift + P` or `Cmd + Shift + P` on Mac).
+3. Search for one of the following commands:
+   - `dotnet: Create Model`
+   - `dotnet: Create Controller`
+   - `dotnet: Create Interface`
+4. Enter the name of the file you want to create.
+5. Select the appropriate folder if prompted.
+6. Your file will be generated with the correct namespace and structure.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## Project Structure
 
-## Extension Settings
+```
+.dotnet-model-generator/
+│── src/
+│   ├── extension.ts   # Main extension logic
+│   ├── utils.ts       # Helper functions (folder detection, namespace retrieval, etc.)
+│── package.json       # Extension metadata and contributions
+│── tsconfig.json      # TypeScript configuration
+│── README.md          # Documentation
+```
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Configuration
 
-For example:
+- The extension automatically searches for `Model(s)`, `Controller(s)`, and `Interface(s)` folders.
+- If no matching folder is found, an error message will be displayed.
 
-This extension contributes the following settings:
+## Contributing
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-branch`.
+3. Commit your changes: `git commit -m 'Added new feature'`.
+4. Push to the branch: `git push origin feature-branch`.
+5. Submit a pull request.
 
-## Known Issues
+## License
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+This project is licensed under the **MIT License**.
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Happy coding! 🚀
